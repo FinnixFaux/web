@@ -1,0 +1,95 @@
+.navbar {
+  background-color: #5B5B5B !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  margin-right: 10px;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  background-color: white;
+  color: #5B5B5B;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust this value if needed */
+}
+
+.center-container {
+  max-width: 600px; /* Adjust this value if needed */
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.write-review {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.review-form .form-field {
+  margin-bottom: 10px;
+}
+
+.review-form label {
+  display: block;
+  font-weight: bold;
+}
+
+.review-form input[type="text"],
+.review-form select,
+.review-form textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.review-form .submit-button {
+  padding: 10px 20px;
+  background-color: #5B5B5B;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.review-form .submit-button:hover {
+  background-color: #5B5B5B;
+}
+
+
+    #black-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: black;
+        z-index: 9999;
+    }
+    
+    body {
+      background-color: whitesmoke;
+    }
+    
+    .rights {
+      background-color: #5B5B5B;
+      color: white;
+      padding-top: 100px;
+      margin-bottom: 0;
+    }
+
+    .white-button {
+      color: white;
+    }
+
+    .white-button,
+.white-button:hover {
+  color: white;
+}

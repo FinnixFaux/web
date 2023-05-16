@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurelie Apparel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles-r/styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="img/logo-white.png" alt="Logo" style="height: 40px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="store.html">Store</a>
+        </li>        
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <div class="center-container">
+      <div class="write-review">
+        <h1>Write a Review:</h1>
+        <div class="review-form">
+          <div class="form-field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+          </div>
+          <div class="form-field">
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+              <option value="5">5 Stars</option>
+              <option value="4">4 Stars</option>
+              <option value="3">3 Stars</option>
+              <option value="2">2 Stars</option>
+              <option value="1">1 Star</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="review">Review:</label>
+            <textarea id="review" name="review" rows="4" cols="50"></textarea>
+          </div>
+          <div class="form-field">
+            <button class="submit-button" onclick="submitReview()">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function submitReview() {
+      var name = document.getElementById("name").value;
+      var rating = document.getElementById("rating").value;
+      var review = document.getElementById("review").value;
+  
+      if (name === "" || rating === "" || review === "") {
+        alert("Please fill out all fields before submitting.");
+        return;
+      }
+      window.location.href = "home.html";
+    }
+  </script>
+
+      <div class="container-fluid rights">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-between align-items-center">
+            <div class="text-left">
+              COPYRIGHT © Aurelie Apparel., LTD. ALL RIGHTS RESERVED.
+            </div>
+            <div>
+              <a href="privacy.html" class="btn btn-link white-button">Privacy and Cookies</a>
+              <a href="terms.html" class="btn btn-link white-button">Terms Of Use</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>

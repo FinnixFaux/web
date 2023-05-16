@@ -1,0 +1,123 @@
+.navbar {
+  background-color: #5B5B5B !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  margin-right: 10px;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  background-color: white;
+  color: #5B5B5B;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+
+    #black-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: black;
+        z-index: 9999;
+    }
+    
+    body {
+      background-color: white;
+    }
+    
+    .rights {
+      background-color: #5B5B5B;
+      color: white;
+      padding-top: 100px;
+      margin-bottom: 0;
+    }
+
+    .white-button {
+      color: white;
+    }
+
+    .latest-products {
+      background-color: #5B5B5B;
+      color: white;
+      padding: 20px;
+      padding-top: 50px;
+      text-align: center;
+    }
+
+    .white-button,
+.white-button:hover {
+  color: white;
+}
+
+.company-socials {
+  background-color: #5B5B5B;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.company-socials h2 {
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links > div {
+  margin-bottom: 10px;
+}
+
+.social-icon {
+  margin-right: 10px;
+}
+
+.social-icon i {
+  font-size: 18px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.about-us {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.about-us h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.about-us p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.owner {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owner img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.owner h2 {
+  margin-top: 10px;
+  font-size: 24px;
+}

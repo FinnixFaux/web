@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurelie Apparel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles-d/styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="img/logo-white.png" alt="Logo" style="height: 40px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="store.html">Store</a>
+        </li>        
+      </ul>
+    </div>
+  </nav>
+
+  <br><br><br>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card mt-5">
+          <div class="card-body">
+            <h5 class="card-title">Confirm Order</h5>
+            <p class="card-text">Please review your order details and click "Submit Order" to complete your purchase.</p>
+            <div id="orderDetails"></div>
+            <div class="form-group">
+              <button id="submitButton" class="btn" style="background-color: #5B5B5B; color: white;" onclick="submitOrder()">Submit Order</button>
+              <button class="btn" style="background-color: #5B5B5B; color: white;" onclick="location.href='buy.html'">Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function submitOrder() {
+
+      window.location.href = "home.html";
+    }
+
+    function getFormData() {
+      var urlParams = new URLSearchParams(window.location.search);
+      var formData = {};
+
+      for (let [key, value] of urlParams) {
+        formData[key] = value;
+      }
+
+      return formData;
+    }
+
+    function displayOrderDetails() {
+      var formData = getFormData();
+      var orderDetailsDiv = document.getElementById('orderDetails');
+
+      var html = '<h6>Name: ' + formData['name'] + '</h6>';
+      html += '<h6>Color: ' + formData['colour'] + '</h6>';
+      html += '<h6>Size: ' + formData['size'] + '</h6>';
+      html += '<h6>Address: ' + formData['address'] + '</h6>';
+      html += '<h6>Phone Number: ' + formData['phoneNumber'] + '</h6>';
+      html += '<h6>Email: ' + formData['email'] + '</h6>';
+      html += '<h6>Credit Card: ' + formData['creditCard'] + '</h6>';
+
+      orderDetailsDiv.innerHTML = html;
+    }
+
+    window.onload = function() {
+      displayOrderDetails();
+    };
+  </script>
+  
+  <br><br><br>
+
+      <div class="container-fluid rights">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-between align-items-center">
+            <div class="text-left">
+              COPYRIGHT © Aurelie Apparel., LTD. ALL RIGHTS RESERVED.
+            </div>
+            <div>
+              <a href="privacy.html" class="btn btn-link white-button">Privacy and Cookies</a>
+              <a href="terms.html" class="btn btn-link white-button">Terms Of Use</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
